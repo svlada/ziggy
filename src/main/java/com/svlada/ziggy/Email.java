@@ -1,5 +1,6 @@
 package com.svlada.ziggy;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.svlada.ziggy.email.Content;
@@ -36,6 +37,14 @@ public class Email {
 
 		public Builder from(EmailAddress from) {
 			this.from = from;
+			return this;
+		}
+		
+		public Builder to(EmailAddress to) {
+			if (this.to == null) {
+				this.to = new ArrayList<EmailAddress>();
+			}
+			this.to.add(to);
 			return this;
 		}
 

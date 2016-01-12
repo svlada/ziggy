@@ -11,8 +11,10 @@ public class App {
 		
 		Logger logger = Logger.getLogger(App.class);
 		
-		EmailAddress.of("svlada@gmail.com");
-		
 		AmazonMailSender mailSender = AmazonMailSenderFactory.of().create();
+		
+		Email email = new Email.Builder().from(EmailAddress.of("svlada@gmail.com")).to(EmailAddress.of("test@gmail.com")).build();
+		
+		mailSender.send(email);
 	}
 }
