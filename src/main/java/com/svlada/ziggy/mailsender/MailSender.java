@@ -1,5 +1,7 @@
 package com.svlada.ziggy.mailsender;
 
-public interface MailSender {
+import com.svlada.ziggy.Email;
 
+public interface MailSender {
+	public void send(Email email);
 }

@@ -1,6 +1,8 @@
 package com.svlada.ziggy.mailsender;
 
-public class AmazonMailSenderFactory implements MailSenderFactory {
+import com.amazonaws.regions.Regions;
+
+public class AmazonMailSenderFactory {
 
 	private AmazonMailSenderFactory() { }
 	
@@ -8,9 +10,8 @@ public class AmazonMailSenderFactory implements MailSenderFactory {
 		return new AmazonMailSenderFactory();
 	}
 	
-	@Override
-	public AmazonMailSender create() {
-		return AmazonMailSender.of();
+	public AmazonMailSender create(Regions region) {
+		return AmazonMailSender.of(region);
 	}
 
 }
