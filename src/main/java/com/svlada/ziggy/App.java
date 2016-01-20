@@ -17,7 +17,7 @@ public class App {
 		AmazonMailSender mailSender = AmazonMailSenderFactory.of().create(Regions.US_EAST_1);
 		
 		Email email = Email.builder().from(EmailAddress.of("Microservices Weekly <mw@microservicesweekly.com>"))
-				.to(EmailAddress.of("test@gmail.com"))
+				.to(EmailAddress.of("svlada@gmail.com"))
 				.subject(Subject.of("Subject"))
 				.content(Content.of("Test email"))
 				.build();

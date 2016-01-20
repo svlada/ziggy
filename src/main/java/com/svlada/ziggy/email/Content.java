@@ -4,11 +4,11 @@ import java.util.Objects;
 
 public class Content {
 	
-	private final String body;
+	private final String value;
 
 	private Content(String body) {
 		super();
-		this.body = body;
+		this.value = body;
 	}
 	
 	public static Content of(String body) {
@@ -17,8 +17,9 @@ public class Content {
 		return new Content(body);
 	}
 
-	public String getBody() {
-		return body;
+	@Override
+	public String toString() {
+		return value;
 	}
 	
 }

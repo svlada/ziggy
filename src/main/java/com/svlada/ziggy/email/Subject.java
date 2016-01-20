@@ -4,10 +4,10 @@ import java.util.Objects;
 
 public class Subject {
 	
-	private final String subject;
+	private final String value;
 
 	private Subject(String subject) {
-		this.subject = subject;
+		this.value = subject;
 	}
 	
 	public static Subject of(String subject) {
@@ -16,8 +16,9 @@ public class Subject {
 		return new Subject(subject);
 	}
 
-	public String getSubject() {
-		return subject;
+	@Override
+	public String toString() {
+		return value.toString();
 	}
 	
 }
